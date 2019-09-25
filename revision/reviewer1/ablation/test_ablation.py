@@ -2,16 +2,9 @@ import numpy as np
 
 from keras.engine.saving import load_model
 import data
-import os
-import tensorflow as tf
-import keras.backend.tensorflow_backend as KTF
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True  # 不全部占满显存, 按需分配
-sess = tf.Session(config=config)
-KTF.set_session(sess)
-validate_path = '/public/lhy/data/npz/all_data_test_0.2_window_300_overlap_0.300000_no_smooth.npz'
-model_name = 'attention.h5'
+
+validate_path = '/public/lhy/data/npz/all_data_test_0.2_window_450_no_his_no_smooth.npz'
+model_name = 'ab_nores.h5'
 
 if __name__ == "__main__":
     data = data.MSData(None, validate_path)

@@ -2,16 +2,10 @@ import numpy as np
 
 from keras.engine.saving import load_model
 import data
-import os
-import tensorflow as tf
-import keras.backend.tensorflow_backend as KTF
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True  # 不全部占满显存, 按需分配
-sess = tf.Session(config=config)
-KTF.set_session(sess)
-validate_path = '/public/lhy/data/npz/all_data_test_0.2_window_300_overlap_0.300000_no_smooth.npz'
-model_name = 'attention.h5'
+import sys
+
+validate_path = '/public/lhy/data/npz/all_data_test_0.2_window_450_no_his_no_smooth.npz'
+model_name = 'lacc_gyr_mag.h5'
 
 if __name__ == "__main__":
     data = data.MSData(None, validate_path)
@@ -33,10 +27,12 @@ if __name__ == "__main__":
 
     model = load_model(model_name)
     predictions = model.predict(
-        {'gyrx_input': gyr_x_v, 'gyry_input': gyr_y_v, 'gyrz_input': gyr_z_v,
+        {
+            'gyrx_input': gyr_x_v, 'gyry_input': gyr_y_v, 'gyrz_input': gyr_z_v,
          'laccx_input': lacc_x_v, 'laccy_input': lacc_y_v, 'laccz_input': lacc_z_v,
          'magx_input': mag_x_v, 'magy_input': mag_y_v, 'magz_input': mag_z_v,
-         'pres_input': pressure_v})
+         # 'pres_input': pressure_v
+        })
     predictions = [np.argmax(p) for p in predictions]
     lv = [np.argmax(t) for t in validate_y]
     accuracy = 0

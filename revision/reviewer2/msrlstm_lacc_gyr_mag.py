@@ -1,7 +1,6 @@
 from keras.models import Model
 from keras.layers import Dense, Input, Conv1D, concatenate, Dropout, \
     LSTM, Activation
-
 import resnet
 
 
@@ -56,7 +55,7 @@ class MSRLSTMNetwork:
         mag_y_cnn = resnet.res_net(mag_y, "single_mag_y")
         mag_z_cnn = resnet.res_net(mag_z, "single_mag_z")
         # Pressure
-        pressure_cnn = resnet.res_net(pressure, "single_pressure")
+        # pressure_cnn = resnet.res_net(pressure, "single_pressure")
         # End of ResNet50 Layer for Input Layers
         # Concatenate Axis For Each Sensor
         concat_lacc = concatenate(
@@ -66,10 +65,10 @@ class MSRLSTMNetwork:
         concat_lacc_resnet = self.simple_cnn(concat_lacc, "concat_lacc")
         concat_gyr_resnet = self.simple_cnn(concat_gyr, "concat_gyr")
         concat_mag_resnet = self.simple_cnn(concat_mag, "concat_mag")
-        concat_pressure_resnet = self.simple_cnn(pressure_cnn, "concat_pressure")
+        # concat_pressure_resnet = self.simple_cnn(pressure_cnn, "concat_pressure")
         # Concatenate All ResNet50 Layers
         all_resnet = concatenate(
-            [concat_lacc_resnet, concat_gyr_resnet, concat_mag_resnet, concat_pressure_resnet])
+            [concat_lacc_resnet, concat_gyr_resnet, concat_mag_resnet])
         # all_resnet = resnet50.ResNet50(all_resnet, "all_resnet")
         lstm = LSTM(128, input_shape=self.lstm_input, activation='tanh',
                     dropout=0.2, recurrent_dropout=0.2)(all_resnet)
@@ -85,7 +84,7 @@ class MSRLSTMNetwork:
         model = Model(inputs=[
             gyr_x, gyr_y, gyr_z,
             lacc_x, lacc_y, lacc_z,
-            mag_x, mag_y, mag_z, pressure
+            mag_x, mag_y, mag_z
         ],
             outputs=[output])
         model.compile(optimizer='adam',
