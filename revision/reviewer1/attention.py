@@ -1,6 +1,8 @@
 from keras.models import Model
 from keras.layers import Dense, Input, Conv1D, concatenate, Dropout, \
     LSTM, Activation, multiply
+from keras.optimizers import Adam
+
 import resnet
 
 
