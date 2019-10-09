@@ -9,7 +9,7 @@ train_args:
   batch_size: 1024
   window_size: 300
   lr: 0.001
-  model_name: attention_g.h5
+  model_name: attention_gg.h5
   model: MSRLSTM
   datatype: SHL
   train_path: /public/lhy/data/npz/all_data_train_0.8_window_300_overlap_0.300000_no_smooth.npz
