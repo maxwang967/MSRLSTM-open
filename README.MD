@@ -36,3 +36,23 @@ The MSRLSTM model is now running on https://github.com/morningstarwang/TMDMobile
 ## Notice
 
 This open source code is specially refracted for more human friendly study use. Other researchers may find bugs because some of the codes are untested. Our researchers are using more complex codes for our research and more codes will be released if any milestone is achieved.  
+
+## Cite
+
+```
+@article{9078348,
+ abstract = {In recent years, with the rapid development of public transportation, the ways people travel has become more diversified and complicated. Transportation mode detection, as a significant branch of human activity recognition (HAR), is of great importance in analyzing human travel patterns, traffic prediction and planning. Though many works have been devoted to transportation mode detection, there remains challenge for accurate and robust transportation pattern identification. In this paper, we propose a residual and LSTM recurrent networks-based transportation mode detection algorithm using multiple light-weight sensors integrated in commodity smartphones. Feature representation learning is adopted separately on multiple preprocessed sensor data using deep residual and LSTM network, which can enhance the identification accuracy and support one or more sensors. Residual units are introduced to accelerate the learning speed and enhance the accuracy of transportation mode detection. Furthermore, we also leverage the attention model to learn the significance of different features and different timesteps to enhance the recognition accuracy. Extensive experimental results on three datasets indicate that using our proposed model can achieve the best recognition accuracy for eight transportation modes including being stationary, walking, running, cycling, taking a car, taking a bus, taking a subway and taking a train, which outperforms other benchmark algorithms.},
+ author = {C. Wang and H. Luo and F. Zhao and Y. Qin},
+ doi = {10.1109/TITS.2020.2987598},
+ issn = {1558-0016},
+ journal = {IEEE Transactions on Intelligent Transportation Systems},
+ keywords = {Context awareness;transportation pattern recognition;multimodal sensors;activity recognition.},
+ month = {},
+ number = {},
+ pages = {1-13},
+ title = {Combining Residual and LSTM Recurrent Networks for Transportation Mode Detection Using Multimodal Sensors Integrated in Smartphones},
+ volume = {},
+ year = {2020}
+}
+
+``` 
