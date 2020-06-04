@@ -12,4 +12,4 @@ chardet==3.0.4
 Keras==2.2.4
 Keras-Applications==1.0.6
 Keras-Preprocessing==1.0.5
-tensorflow==1.11.0
+tensorflow==1.15.2
