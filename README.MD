@@ -2,7 +2,7 @@
 
 ## Notice
 
-This repo is based on old version of Keras DL Framework, I highly recommend anyone who refers this repo to use TensorFlow 2.x and most of the APIs should go under tf.keras. I have recenly referred this repo to conduct new experiments by this way and I think it will be helpful for you too. If you really need a sample code, please feel free to contact me at max.chenxing.wang (at) gmail.com.
+This repo has been recently updated to support tf 2.x without comprehensive tested, please feel free to contact me at max.chenxing.wang (at) gmail.com if bugs appear.
 
 ## Guidelines
 
