@@ -1,8 +1,8 @@
 import os
 import tensorflow as tf
-import keras.backend.tensorflow_backend as KTF
+# import keras.backend.tensorflow_backend as KTF
 import numpy as np
-from keras.callbacks import ModelCheckpoint
+from tf.keras.callbacks import ModelCheckpoint
 
 
 class Trainer:
@@ -35,10 +35,10 @@ class Trainer:
 
     def _initial_gpu_env(self, device_id):
         os.environ["CUDA_VISIBLE_DEVICES"] = str(device_id)
-        config = tf.ConfigProto()
-        config.gpu_options.allow_growth = True
-        sess = tf.Session(config=config)
-        KTF.set_session(sess)
+#         config = tf.ConfigProto()
+#         config.gpu_options.allow_growth = True
+#         sess = tf.Session(config=config)
+#         KTF.set_session(sess)
 
     def _load_data(self, train_path, validate_path):
         train_data = np.load(train_path)
