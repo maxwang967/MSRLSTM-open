@@ -1,5 +1,5 @@
-from keras import layers
-from keras.layers import Activation, Conv1D, \
+from tf.keras import layers
+from tf.keras.layers import Activation, Conv1D, \
     MaxPooling1D
 
 
