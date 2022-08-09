@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 from scipy import stats
-from keras.utils import to_categorical
+from tf.keras.utils import to_categorical
 
 train_split_ratio = 0.5  # 训练集占80%
 num_classes = 8
