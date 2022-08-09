@@ -1,5 +1,5 @@
-from keras.models import Model
-from keras.layers import Dense, Input, Conv1D, concatenate, Dropout, \
+from tf.keras.models import Model
+from tf.keras.layers import Dense, Input, Conv1D, concatenate, Dropout, \
     LSTM, Activation, multiply
 
 from models.modules import resnet
