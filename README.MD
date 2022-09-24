@@ -4,6 +4,8 @@
 
 This repo has been recently updated to support tf 2.x without comprehensive tested, please feel free to contact me at max.chenxing.wang (at) gmail.com if bugs appear.
 
+We provide the HTC sample dataset at: https://drive.google.com/drive/folders/1pDdGNzo02vFl9Nyz4HQWd0UyvTy_tw1o?usp=sharing.
+
 ## Guidelines
 
 MSRLSTM is a deep learning model for transportation mode detection. To successfully run this code, there are several works needed to be done at first:
