@@ -9,7 +9,4 @@ backcall==0.1.0
 beautifulsoup4==4.7.1
 certifi==2018.4.16
 chardet==3.0.4
-Keras==2.2.4
-Keras-Applications==1.0.6
-Keras-Preprocessing==1.0.5
 tensorflow==2.7.2
