@@ -37,7 +37,7 @@ python run.py --config=/public/lhy/wms/MSRLSTM/utils/config.yaml --mode=test
 
 ## Application Status
 
-The MSRLSTM model is now running on https://github.com/morningstarwang/TMDMobileNG with our cloud server. We are still testing and optimizing our MSRLSTM to behave more functionality in real world.
+The MSRLSTM model is now running on https://github.com/maxwang967/TMDMobileNG with our cloud server. We are still testing and optimizing our MSRLSTM to behave more functionality in real world.
 
 ## Notice
 
