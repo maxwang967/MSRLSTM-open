@@ -2,7 +2,7 @@
 
 ## Notice
 
-This repo has been recently updated to support tf 2.x without comprehensive tested, please feel free to contact me at max.chenxing.wang (at) gmail.com if bugs appear.
+This repo has been recently updated to support tf 2.x without comprehensive tested, please feel free to contact me at maxwang967 (at) gmail.com if bugs appear.
 
 We provide the HTC sample dataset at: https://drive.google.com/drive/folders/1pDdGNzo02vFl9Nyz4HQWd0UyvTy_tw1o?usp=sharing.
 
